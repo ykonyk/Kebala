@@ -16,8 +16,8 @@ de productos provenientes del menú por consola.
 - Enviar al correo del cliente, recopilando los productos.
 - Antes de envio, se comprueba la validez del correo.
 
->Desarollado por ***YK, RM, SM***
->Para consultas mail a:
+Desarollado por ***YK, RM, SM***
+Para consultas mail a:
 ```
 KebalaApp2021@gmail.com
 ```
