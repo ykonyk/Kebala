@@ -2,8 +2,8 @@
 
 Proyecto final de la asignatura **Entornos de Desarrollo**.
 
-Se trata de una aplicación simple y barata de desarrollar que se ajusta a los requisitos
-del cliente, basada en la introducción de productos provenientes del menú por consola.
+Se trata de una aplicación simple basada en la introducción
+de productos provenientes del menú por consola.
 
 - En función de la selección variación del precio.
 - Confirmación del pedido. 
@@ -14,8 +14,14 @@ del cliente, basada en la introducción de productos provenientes del menú por 
 - Muestra y devolución de efectivo.
 - Si se desea imprimir el tiquet. 
 - Enviar al correo del cliente, recopilando los productos.
-
+- Antes de envio, se comprueba la validez del correo.
 
 >Desarollado por ***YK, RM, SM***
+>Para consultas mail a:
+```
+KebalaApp2021@gmail.com
+```
+ 
 
+:EMOJICODE:
 
