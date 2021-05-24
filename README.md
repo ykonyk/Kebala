@@ -18,10 +18,9 @@ de productos provenientes del menú por consola.
 
 Desarollado por ***YK, RM, SM***
 Para consultas mail a:
-```
-KebalaApp2021@gmail.com
-```
+ ```
+  KebalaApp2021@gmail.com
+ ```
  
-
-:EMOJICODE:
+:burrito:
 
