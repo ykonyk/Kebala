@@ -20,7 +20,7 @@ public class Operaciones {
 	public static double precio = 0;
 	public static String correoCliente, DatosParaEnvio = "";
 	public static String correoAplicativo = "KebalaApp2021@gmail.com";
-	public static String contraseñaCorreoAplicativo = "KebabApp1234";
+	public static String contraseÃ±aCorreoAplicativo = "KebabApp1234";
 	public static Scanner sc = new Scanner(System.in);
 	public static ArrayList<String> Pedido = new ArrayList<String>();
 
@@ -65,8 +65,8 @@ public class Operaciones {
 
 	public static void seleccionComida() {
 		do {
-			System.out.println("¿Que desea como entrante principal?");
-			System.out.println("1.Durum (4€) \t" + "2.Kebab(5€)\t" + "3.Plato(6,50€)");
+			System.out.println("Â¿Que desea como entrante principal?");
+			System.out.println("1.Durum (4â‚¬) \t" + "2.Kebab(5â‚¬)\t" + "3.Plato(6,50â‚¬)");
 			byte o1 = Byte.valueOf(sc.nextLine());
 			switch (o1) {
 			case 1:
@@ -90,8 +90,8 @@ public class Operaciones {
 
 	public static void seleccionTipoCarne() {
 		do {
-			System.out.println("\n¿Con que tipo de carne lo prefiere?");
-			System.out.println("1.Pollo \t" + "2.Ternera(+ 0.50€) \t" + "3.Mixto(+ 0.25€)");
+			System.out.println("\nÂ¿Con que tipo de carne lo prefiere?");
+			System.out.println("1.Pollo \t" + "2.Ternera(+ 0.50â‚¬) \t" + "3.Mixto(+ 0.25â‚¬)");
 			byte o2 = Byte.valueOf(sc.nextLine());
 			switch (o2) {
 			case 1:
@@ -114,7 +114,7 @@ public class Operaciones {
 
 	public static void seleccionRelleno() {
 		do {
-			System.out.println("\n¿Relleno de solo carne o carne con ensalada?");
+			System.out.println("\nÂ¿Relleno de solo carne o carne con ensalada?");
 			System.out.println("1.Carne \t" + "2.Ensalada");
 			byte o3 = Byte.valueOf(sc.nextLine());
 			switch (o3) {
@@ -134,8 +134,8 @@ public class Operaciones {
 
 	public static void seleccionBebida() {
 		do {
-			System.out.println("\n¿Que desea para beber?");
-			System.out.println("1.Coca-Cola (0,75€) \t" + "2.Fanta(0,70€) \t" + "3.Cerveza(1€)\t" + "4.Agua(0.40€)");
+			System.out.println("\nÂ¿Que desea para beber?");
+			System.out.println("1.Coca-Cola (0,75â‚¬) \t" + "2.Fanta(0,70â‚¬) \t" + "3.Cerveza(1â‚¬)\t" + "4.Agua(0.40â‚¬)");
 			byte o4 = Byte.valueOf(sc.nextLine());
 			switch (o4) {
 			case 1:
@@ -173,11 +173,11 @@ public class Operaciones {
 	public static void resumen() throws Exception {
 		cargaFict();
 		System.out.print("\nResumen del pedido: " + Pedido + " \n");
-		System.out.println("Total: " + "\t" + precio + "€\n");
+		System.out.println("Total: " + "\t" + precio + "â‚¬\n");
 	}
 
 	public static void finalizarOrden() throws Exception {
-		System.out.println("¿Como desea proceder?");
+		System.out.println("Â¿Como desea proceder?");
 		System.out.println("Seleccione: 1 para Finalizar --- 2 para Realizar otro pedido.");
 		int aux2 = Byte.valueOf(sc.nextLine());
 		System.out.println();
@@ -210,7 +210,7 @@ public class Operaciones {
 		double cantiIntro = Double.valueOf(sc.nextLine());
 		double aux4 = cantiIntro - precio;
 		double cambio = (double)(Math.round(aux4  * 100D) / 100D);
-		System.out.println("\nRecoja su cambio de: " + cambio + "€.");
+		System.out.println("\nRecoja su cambio de: " + cambio + "â‚¬.");
 		preguntaEnviarFacturaMail();
 		System.exit(0);
 	}
@@ -233,8 +233,8 @@ public class Operaciones {
 	}
 
 	public static void preguntaEnviarFacturaMail() throws Exception {
-		System.out.println("\n¿Deseas recibir la factura en tu correo electronico?");
-		System.out.println("Seleccione: 1 para no enviar --- 2 para enviar");
+		System.out.println("\nÂ¿Deseas recibir la factura en tu correo electronico?");
+		System.out.println("Seleccione: 1 para no enviar -- 2 para enviar");
 		byte aux1 = Byte.valueOf(sc.nextLine());
 		System.out.println();
 		if (aux1 == 1) {
@@ -248,7 +248,7 @@ public class Operaciones {
 	}
 
 	public static void ingresarCorreo() throws Exception {
-		System.out.print("Introduzca su correo electrónico: ");
+		System.out.print("Introduzca su correo electrÃ³nico: ");
 		correoCliente = sc.nextLine();
 		validarEmail();
 	}
@@ -259,7 +259,7 @@ public class Operaciones {
 		String mail = correoCliente;
 		Matcher mather = patron.matcher(mail);
 		if (mather.find() == true) {
-			System.out.println("\nEl email ingresado es válido, lo recibira en " + mail + " dentro de unos instantes.");
+			System.out.println("\nEl email ingresado es vÃ¡lido, lo recibira en " + mail + " dentro de unos instantes.");
 			System.out.println("\nGracias por su visita y vuelva pronto!");
 			conversionDatos();
 		} else {
@@ -290,14 +290,14 @@ public class Operaciones {
 		properties.put("mail.smtp.port", "587");
 		Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(correoAplicativo, contraseñaCorreoAplicativo);
+				return new PasswordAuthentication(correoAplicativo, contraseÃ±aCorreoAplicativo);
 			}
 		});
 		MimeMessage message = new MimeMessage(session);
 		message.setFrom(new InternetAddress(from));
 		message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 		message.setSubject("Factura Numero: " + contadorFacturas + " de Kebala");
-		message.setText("Resumen de la factura electronica:\n" + DatosParaEnvio + "€" + "\n\nGracias, hasta pronto.");
+		message.setText("Resumen de la factura electronica:\n" + DatosParaEnvio + "â‚¬" + "\n\nGracias, hasta pronto.");
 		Transport.send(message);
 		System.out.println("Enviado correctamente !");
 	}
