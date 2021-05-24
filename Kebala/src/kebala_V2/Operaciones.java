@@ -234,7 +234,7 @@ public class Operaciones {
 
 	public static void preguntaEnviarFacturaMail() throws Exception {
 		System.out.println("\n¿Deseas recibir la factura en tu correo electronico?");
-		System.out.println("Seleccione: 1 para no enviar -- 2 para enviar");
+		System.out.println("Seleccione: 1 para no enviar --- 2 para enviar");
 		byte aux1 = Byte.valueOf(sc.nextLine());
 		System.out.println();
 		if (aux1 == 1) {
