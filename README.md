@@ -2,6 +2,9 @@
 
 Proyecto final de la asignatura **Entornos de Desarrollo**.
 
+Se trata de una aplicación simple y barata de desarrollar que se ajusta a los requisitos
+del cliente, basada en la introducción de productos provenientes del menú por consola.
+
 - En función de la selección variación del precio.
 - Confirmación del pedido. 
 - Coste total del pedido. 
