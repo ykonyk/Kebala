@@ -1,4 +1,4 @@
-### Kebala App
+# Kebala App
 
 Proyecto final de la asignatura **Entornos de Desarrollo**.
 
