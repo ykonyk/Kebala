@@ -210,7 +210,7 @@ public class Operaciones {
 		double cantiIntro = Double.valueOf(sc.nextLine());
 		double aux4 = cantiIntro - precio;
 		double cambio = (double)(Math.round(aux4  * 100D) / 100D);
-		System.out.println("\nRecoja su cambio de: " + cambio + "€.");
+		System.out.println("\nRecoja su cambio de: " + cambio + "€");
 		preguntaEnviarFacturaMail();
 		System.exit(0);
 	}
@@ -297,8 +297,8 @@ public class Operaciones {
 		message.setFrom(new InternetAddress(from));
 		message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 		message.setSubject("Factura Numero: " + contadorFacturas + " de Kebala");
-		message.setText("Resumen de la factura electronica:\n" + DatosParaEnvio + "€" + "\n\nGracias, hasta pronto.");
+		message.setText("Resumen de la factura electronica:\n\n" + DatosParaEnvio + "€" + "\n\nGracias, hasta pronto.");
 		Transport.send(message);
-		System.out.println("Enviado correctamente !");
+		System.out.println("Enviado correctamente!");
 	}
 }
