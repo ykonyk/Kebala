@@ -22,5 +22,5 @@ Para consultas mail a:
   KebalaApp2021@gmail.com
  ```
  
-:burrito: :burrito::burrito::burrito::burrito::burrito::burrito::burrito::burrito:
+:burrito::burrito::burrito::burrito::burrito::burrito::burrito::burrito::burrito:
 
