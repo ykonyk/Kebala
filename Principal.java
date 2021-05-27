@@ -6,7 +6,7 @@ public class Principal {
 	//Descargar Ansi escape on console en /help	/Eclipse marketplace
 
 	public static void main(String[] args) throws Exception {
-		//Operaciones.banner();
+		Operaciones.banner();
 		Operaciones.seleccionComida();
 	}
 }
