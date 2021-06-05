@@ -15,16 +15,16 @@ import javax.mail.internet.MimeMessage;
 
 public class Correo extends Menu {
 	
-	public static String correoAplicativo = "KebalaApp2021@gmail.com";
-	public static String contraseñaCorreoAplicativo = "KebabApp1234";
+	public static String correoAplicativo = " ";
+	public static String contraseÃ±aCorreoAplicativo = " ";
 	
 /**
- * Selección realizada por el usuario de enviar el correo electrónico o no.
+ * SelecciÃ³n realizada por el usuario de enviar el correo electrÃ³nico o no.
  * @throws Exception a causa de que se realiza la llamada de ingresarCorreo() en el interior.
  */
 	public static void preguntaEnviarFacturaMail() throws Exception {
 		short operacion = 0;
-		System.out.println(green + "\n¿Deseas recibir la factura en tu correo electronico?" + reset);
+		System.out.println(green + "\nÂ¿Deseas recibir la factura en tu correo electronico?" + reset);
 		boolean ok = true;
 		do {
 			ok = true;
@@ -50,18 +50,18 @@ public class Correo extends Menu {
 	}
 
 /**
- * Introducción del correo electrónico del usuario por consola.
+ * IntroducciÃ³n del correo electrÃ³nico del usuario por consola.
  * @throws Exception a causa de que se realiza la llamada de validarEmail() en el interior.
  */
 	public static void ingresarCorreo() throws Exception {
-		System.out.print(green + "Introduzca su correo electrónico: " + reset);
+		System.out.print(green + "Introduzca su correo electrÃ³nico: " + reset);
 		correoCliente = sc.nextLine();
 		validarEmail();
 	}
 
 /**
  * Validacion del correo introducido, comparandolo con un patron estandar y repeticion en caso de fallo.
- * @throws Exception a causa de que se llaman varios métodos en el interior.
+ * @throws Exception a causa de que se llaman varios mÃ©todos en el interior.
  */
 	public static void validarEmail() throws Exception {
 		//Conjunto de caracteres unidos para comprar los datos entrantes.
@@ -71,7 +71,7 @@ public class Correo extends Menu {
 		Matcher mather = patron.matcher(mail);
 		if (mather.find() == true) {
 			System.out.println(
-					green + "\nEl email ingresado es válido, lo recibira en " + mail + " dentro de unos instantes.");
+					green + "\nEl email ingresado es vÃ¡lido, lo recibira en " + mail + " dentro de unos instantes.");
 			System.out.println(green + "\nGracias por su visita y vuelva pronto!");
 			conversionDatos();
 		} else {
@@ -96,7 +96,7 @@ public class Correo extends Menu {
 	}
 
 /**
- * Realiza el envio de datos procesados a traves del protocolo smtp al correo estipulado junto con un correo host y su respectiva autentificación.
+ * Realiza el envio de datos procesados a traves del protocolo smtp al correo estipulado junto con un correo host y su respectiva autentificaciÃ³n.
  * @throws Exception a causa de que se realiza la llamada de metodos de la api de java.mail en el interior.
  */
 	public static void EnviarFacturaMail() throws Exception {
@@ -111,10 +111,10 @@ public class Correo extends Menu {
 		properties.put("mail.smtp.host", "smtp.gmail.com");
 		properties.put("mail.smtp.port", "587");
 		//Autentificacion.
-		//CorreoAplicativo es el correo desde donde se envia, contraseñaCorreoAplicativo es la contraseña de acceso a la cuenta.
+		//CorreoAplicativo es el correo desde donde se envia, contraseÃ±aCorreoAplicativo es la contraseÃ±a de acceso a la cuenta.
 		Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(correoAplicativo, contraseñaCorreoAplicativo);
+				return new PasswordAuthentication(correoAplicativo, contraseÃ±aCorreoAplicativo);
 			}
 		});
 		MimeMessage message = new MimeMessage(session);
@@ -123,7 +123,7 @@ public class Correo extends Menu {
 		//Sujeto del correo.
 		message.setSubject("Factura Numero: " + contadorFacturas + " de Kebala");
 		//Contenido del correo.
-		message.setText("Resumen de la factura electronica:\n" + DatosParaEnvio + "€" + "\n\nGracias, hasta pronto.");
+		message.setText("Resumen de la factura electronica:\n" + DatosParaEnvio + "â‚¬" + "\n\nGracias, hasta pronto.");
 		Transport.send(message);
 		System.out.println("\nEnviado correctamente !");
 	}
