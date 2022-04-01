@@ -110,13 +110,9 @@ public class Correo extends Menu {
 		properties.put("mail.smtp.starttls.enable", "true");
 		properties.put("mail.smtp.host", "smtp.gmail.com");
 		properties.put("mail.smtp.port", "587");
-		//Autentificacion.
-		//CorreoAplicativo es el correo desde donde se envia, contraseñaCorreoAplicativo es la contraseña de acceso a la cuenta.
 		Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(correoAplicativo, contraseñaCorreoAplicativo);
-			}
-		});
+				return new PasswordAuthentication(correoAplicativo, contraseñaCorreoAplicativo);}});
 		MimeMessage message = new MimeMessage(session);
 		message.setFrom(new InternetAddress(from));
 		message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
